@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>AwalM-safety-handbook</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
+	<!-- Google Font -->
+	<link href="../css/font-roboto.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/style.css">
+	<script type="text/javascript" src="../js/fontawesome-all.min.js"></script>
+	<script type="text/javascript" src="../js/config.js"></script>
+</head>
+
+<body>
+
+			<div id="snackbar" class="message"></div>
+
+			<div class="container-pdf">	
+				
+				<div class="row pl-3 pr-3 ">
+					<div class="col-lg-12" id="mypdf" ></div>
+					<!-- <div class="col-lg-1"></div> -->
+				</div>
+				<div class="row pt-1">
+					<div class="col-lg-11">
+						
+					</div>
+					<div class="col-lg-1">
+						<a href="DE.html" class="align-right">
+							<span class="badge badge-secondary p-3"><<<</span>
+						</a>
+					</div>
+				</div>
+			</div>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="../js/pdfobject.js"></script>
+	<script>						
+		<!--set/reset idle time-->
+				(function() {
+					let idleDurationSecs;    // X number of seconds
+					let counter;    // X number of seconds
+					const redirectUrl = '../index.html';  // Redirect idle users to this URL
+					let idleTimeout; // variable to hold the timeout, do not modify
+					let idleInterval;
+					
+					//console.log(timeout_config);
+					
+					idleDurationSecs = timeout_config.idleDurationSecs;
+					counter = timeout_config.msg_counter;						
+					const message = document.querySelector(".message");
+					 
+
+					const resetIdleTimeout = function() {						
+						var x = document.getElementById("snackbar")
+						// Clears the existing timeout
+						if(idleTimeout)	clearTimeout(idleTimeout);
+
+						if(idleInterval) {
+							clearInterval(idleInterval);
+							message.style.visibility = "hidden";
+							x.className = "";
+						}							
+
+						// Set a new idle timeout to load the redirectUrl after idleDurationSecs
+						idleTimeout = setTimeout(() =>{ 						    
+
+							// Add the "show" class to DIV
+							x.className = "show";
+							setTimeout(function(){ x.className = x.className.replace("show", ""); }, counter * 1000);
+							
+							//const counter=4;
+							message.style.visibility = "visible";
+							//message = document.querySelector(".message"); 
+							message.innerText = "Redirecting to the start page in ";//"Redirecting to the start page in ";
+							message.insertAdjacentHTML("beforeend", "<span id='counter'>"+counter+"</span> seconds. To cancel click/mousemove outside the PDF.");
+							
+							idleInterval = setInterval(() =>{
+							  var span = document.querySelector("#counter");
+							  var count = span.textContent * 1 - 1;
+							  span.textContent = count < 0 ? 0 : count;
+							  if (count === 0) {
+								window.location.replace("../index.html");
+							  }
+							 }, 1000);}
+						, idleDurationSecs * 1000);
+					};
+
+					// Init on page load
+					resetIdleTimeout();
+
+					// Reset the idle timeout on any of the events listed below
+					['click', 'touchstart', 'mousemove'].forEach(evt => 
+						document.addEventListener(evt, resetIdleTimeout, false)
+					);
+					
+					let pdf_iframe = PDFObject.embed("../../../pdfs/EN_Handwerker.pdf", "#mypdf", 
+										{pdfOpenParams: { 
+											  page: '1', 
+											  view: 'FitH',
+											  toolbar: '0'},
+											  forcePDFJS: true,
+											  PDFJS_URL: "../js/pdfjs/web/viewer.html"
+										  });
+					
+				})();
+				
+	</script>
+</body>
+
+</html>
+							
+							

@@ -1,0 +1,337 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #F7F8FA;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #66bb6a;
+}
+.badge-primary {
+    color: #fff;
+    background-color: #66bb6a;
+}
+.theme-bg-primary {
+  background-color: #66bb6a;
+}
+
+.theme-bg-primary-darken {
+  background-color: #191d22;
+}
+
+a.theme-btn-on-bg, .theme-btn-on-bg {
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border: none;
+}
+
+a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active,
+.theme-btn-on-bg:hover, .theme-btn-on-bg:focus, .theme-btn-on-bg:active {
+  background: rgba(0, 0, 0, 0.4);
+  border-color: transparent;
+  border: none;
+}
+
+.progress {
+  border-radius: 2px;
+}
+
+.theme-progress-bar-dark {
+  background-color: #66bb6a;
+}
+
+.resume-wrapper {
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.resume-wrapper-inner {
+  max-width: 1000px;
+}
+
+.resume-header {
+  background: #66bb6a;
+  color: rgba(255, 255, 255, 0.9);
+  height: 220px;
+}
+
+.resume-header .picture {
+  width: 220px;
+}
+
+.resume-header .name {
+  font-size: 2.25rem;
+  letter-spacing: 0.175rem;
+  font-weight: 900;
+}
+
+.resume-header .title {
+  font-size: 1.5rem;
+}
+
+.resume-header a, .resume-header li {
+  color: #98ee99;
+}
+
+.resume-header a:hover {
+  color: white;
+}
+
+.resume-social {
+  font-size: 0.875rem;
+}
+
+.resume-social .fa-container {
+  font-size: 1rem;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 0.125rem;
+  background: white;
+  color: #66bb6a;
+}
+
+.resume-section-title {
+  font-size: 1.25rem;
+  position: relative;
+  color: #66bb6a;
+}
+
+.resume-section-title:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #338a3e;
+}
+
+.resume-section-content {
+  color: #999999;
+}
+
+.resume-timeline {
+  padding-left: 2rem;
+}
+
+.resume-timeline:before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 100%;
+  background: #66bb6a;
+  left: 6px;
+  top: 4px;
+  position: absolute;
+}
+
+.resume-timeline-item:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: -32px;
+  top: 3px;
+  width: 15px;
+  height: 15px;
+  border: 4px solid #338a3e;
+  background: white;
+  border-radius: 50%;
+}
+
+.resume-progress {
+  height: 0.6rem;
+}
+
+.resume-company-name {
+  color: #338a3e;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.resume-position-time {
+  font-size: 0.875rem;
+  color: #aab4c3;
+}
+
+.resume-position-title {
+  font-size: 1.125rem;
+  color: #66bb6a;
+}
+
+.resume-timeline-item-desc-heading {
+  font-size: 1rem;
+}
+
+.resume-skills-cat {
+  font-size: 1rem;
+  color: #66bb6a;
+}
+
+.resume-skill-name {
+  font-size: 0.8125rem;
+  color: #66bb6a;
+}
+
+.resume-degree {
+  color: #66bb6a;
+}
+
+.resume-degree-org {
+  font-size: 0.875rem;
+}
+
+.resume-degree-time {
+  color: #aab4c3;
+  font-size: 0.875rem;
+}
+
+.resume-award-icon {
+  left: 0;
+  top: 4px;
+  color: #aab4c3;
+}
+
+.resume-award-name {
+  font-weight: bold;
+  color: #66bb6a;
+}
+
+.resume-award-desc {
+  font-size: 0.875rem;
+}
+
+.resume-lang-name {
+  color: #66bb6a;
+}
+
+.footer .fa-heart {
+  color: #fb866a;
+}
+
+@media (max-width: 767.98px) {
+  .resume-wrapper {
+    padding-top: 0;
+  }
+  .resume-header {
+    height: 530px;
+  }
+  .resume-header .picture {
+    width: 120px;
+    border-radius: 4px;
+  }
+  
+  p.longword {    
+	padding-bottom: 0.50em;	
+  }
+}
+
+@media screen and (min-width: 265.98px) {
+  p.longword {
+    font-size: 11px;
+	padding-bottom: 0;
+	
+  }
+}
+@media screen and (min-width: 354.98px) {
+  p.longword {
+    font-size: 12px;
+	padding-bottom: 0;
+	
+  }
+}
+
+@media screen and (min-width: 378.98px) {
+  p.longword {
+    font-size: 3vw;
+	padding-bottom: 1em;
+	
+  }
+}
+
+@media screen and (min-width: 476.98px) {
+  p.longword {
+    font-size: 16px;
+	padding-bottom: 0.50em;
+	
+  }
+}
+
+.pdfobject-container { 
+	  height: 93vh;
+	  border: 0px solid #ccc; 
+	  padding:0 !important;
+	}
+.message {
+      align-items: center;
+	  text-align: center;
+	  cursor: context-menu;
+    }	
+
+.container-pdf{
+	width:99vw;
+	padding-left: 0.5vw;
+}
+.align-right{
+	float: right;
+	margin-left: auto; 
+	margin-right: 0;
+	padding: 0;
+	background-color: #5C6062 !important;
+	border-radius: 10px;
+}
+
+.nhs-button{
+	background-color: #009870 !important;
+}
+
+.badge-secondary{
+	background-color: #5C6062 !important;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #5C6062; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    top: 0;
+    top: 20px; /* 30px from the bottom */
+	left: 50%;
+	font-size:1.5vw !important;
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible !important; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 30s;
+    animation: fadein 0.5s, fadeout 0.5s 30s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 20px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 20px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {top: 20px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {top: 20px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}
